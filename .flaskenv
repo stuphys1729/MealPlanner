@@ -1,1 +1,2 @@
 FLASK_APP=mealPlanner.py
+FLASK_DEBUG=1

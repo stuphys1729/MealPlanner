@@ -1,18 +1,13 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Meal Planner</title>
-        {% else %}
-        <title>Welcome to Meal Planner</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hi, {{ user.username }}!</h1>
-        {% for recipe in recipes %}
-            <h2>Recipe: {{ recipe.name }}</h2>
-            {% for ing in recipe.ingredients %}
-                <div><p>{{ ing[0] }} : {{ ing[1] }}</p></div>
-            {% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for recipe in recipes %}
+        <h2>Recipe: {{ recipe.name }}</h2>
+        {% for ing in recipe.ingredients %}
+            <div><p>{{ ing[0] }} : {{ ing[1] }}</p></div>
         {% endfor %}
-    </body>
-</html>
+    {% endfor %}
+
+{% endblock %}
