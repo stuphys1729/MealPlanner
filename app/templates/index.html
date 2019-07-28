@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1>Hi, {{ user.username }}!</h1>
+    <h1>Hi, {{ current_user.username }}!</h1>
     {% for recipe in recipes %}
         <h2>Recipe: {{ recipe.name }}</h2>
         {% for ing in recipe.ingredients %}
